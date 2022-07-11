@@ -1,15 +1,24 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<!-- Lange set for screen readers -->
+<html lang="en" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
   <head>
+    <!-- Help character display properly. -->
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!-- Force some Outlook clients to render with a better MS engine. -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Set the initial scale of the email. -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Help prevent blue links and autolinking if needed. -->
+    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+    <!-- Prevent Apple from reformatting and zooming messages. -->
+    <meta name="x-apple-disable-message-reformatting">
     <meta name="color-scheme" content="light dark" />
     <meta name="supported-color-schemes" content="light dark" />
-    <title>HTML Email Template Boilerplate</title>
+    <!-- Use the title for assistive technology and when people open emails in a browser tab.  -->
+    <title>ServerSharing Promotional Email</title>
     <style type="text/css">
       @import url("@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');");
-      table {
+      /* table {
         border-spacing: 0;
       }
 
@@ -27,7 +36,52 @@
         text-decoration: none;
         font-size:18px;
         font-weight:500px; 
+      } */
+
+
+      /* Client-specific reset styles. */
+      body, table, td, a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+      table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+      img { -ms-interpolation-mode: bicubic; }
+
+      /* General reset styles. */
+      img { border: 0; height: auto; line-height: 100%; outline: none; text-decoration: none; }
+      table { border-collapse: collapse !important; }
+      body { height: 100% !important; margin: 0 !important; padding: 0 !important; width: 100% !important; }
+
+      /* Prevent Apple blue links. */
+      a[x-apple-data-detectors] {
+          color: inherit !important;
+          text-decoration: none !important;
+          font-size: inherit !important;
+          font-family: inherit !important;
+          font-weight: inherit !important;
+          line-height: inherit !important;
       }
+
+      /* Prevent Gmail blue links. */
+      u + #body a {
+          color: inherit;
+          text-decoration: none;
+          font-size: inherit;
+          font-family: inherit;
+          font-weight: inherit;
+          line-height: inherit;
+      }
+
+      /* Prevent Samsung blue links. */
+      #MessageViewBody a {
+          color: inherit;
+          text-decoration: none;
+          font-size: inherit;
+          font-family: inherit;
+          font-weight: inherit;
+          line-height: inherit;
+      }
+
+      /* Provide default styles for links and hovers. */
+      a { color:#ffffff; font-weight: bold; text-decoration: none; }
+      a:hover {  text-decoration: none; }
 
       @media screen and (max-width: 599.98px) {
       }
@@ -43,8 +97,9 @@
       </style>
     <![endif]-->
   </head>
+  <!-- Set a body id for Gmail blue links and disable default margins and padding. -->
   <body
-    style="Margin: 0; padding: 0; min-width: 100%; background-color: #dde0e1;"
+  id="body" style="Margin: 0; padding: 0; min-width: 100%; background-color: #dde0e1;"
   >
     <center style="width: 100%; table-layout: fixed; background-color: #dde0e1;">
       <div
@@ -56,6 +111,11 @@
         "
       >
         <!-- Preheader -->
+        
+        <!-- This is a conditional 'ghost' table that only Outlook will see. Outlook does not support 'max-width' so we need to use a ghost table to constrain -->
+        <!--[if (gte mso 9)|(IE)]>
+        <table cellspacing="0" cellpadding="0" border="0" width="600" align="center" role="presentation"><tr><td>
+        <![endif]-->
 
         <!-- End Preheader -->
         <table
@@ -77,27 +137,27 @@
         >
           <!-- Start Hero Block -->
           <tr>
-            <td width="100%" align="center">
-                <table width="100%" cellpadding="0" cellspacing="0" role="presentation" style="Margin-top: 52px;">
+            <td width="100%"  align="center">
+                <table width="100%" cellpadding="0" cellspacing="0" role="presentation" style="Margin-top: 52px;  ">
                   <tr>
                     <td class="hero-block"   style="background: url('/assets/background-img.png'); background-repeat:no-repeat; background-position: right -40px top; background-size: 455px 430px;vertical-align: top;">
-                      <table width="100%" cellpadding="0" cellspacing="0" role="presentation" style="padding:0 50px 0 50px; ">
+                      <table align="center" width="100%"  cellpadding="0" cellspacing="0" role="presentation" style="padding:0 50px 0 50px; max-width: 460px;">
                         <tr>
                           <td width="50%" ><a href="https://example.com" target="_blank"><img src="assets/logo/brand.png" alt="logo"></a></td>
                           <td style="text-align: right;"><a href="https://example.com" target="_blank"><img  src="assets/Visit website _.png" alt="logo"></a></td>
                         </tr>
                       </table>
-                      <table width="500" cellpadding="0" cellspacing="0" role="presentation" style="padding:83px 0 0 50px;">
+                      <table align="center" width="100%" cellpadding="0" cellspacing="0" role="presentation" style="Margin-top: 77px; max-width:460px;">
                         <tr>
                           <td><p style="font-size:48px; line-height:58.09px;color:#0C1014;font-weight: 700;Margin:0; ">Powerful and safe server hosting</p></td>              
                         </tr>
                         <tr>
-                          <td><p style="font-size:18px; line-height:27px;color: #515759;padding-top:25px;font-weight:400;">Our revolutionary Cloud solution is powerful, simple, and surprisingly affordable. Harnessing the web has never been easier</p></td>
+                          <td><p style="font-size:18px; line-height:27px;color: #515759;padding-top:25px;font-weight:400;">Our revolutionary Cloud solution is powerful, simple, and surprisingly affordable. Harnessing the web has never been easier.</p></td>
                         </tr>
                         <tr>
                           <td style="padding-top:35px;">
                             <table align="left" border="0" valign="center">
-                              <td style="border-radius:10px;" bgcolor="#1890FF"><a href="https://example.com" target="_blank" style="background-color:#1890FF; border:1px solid #1890FF; border-radius:10px;padding:10px 75px 10px 75px;">Learn more</a></p></td>
+                              <td ><a href="https://example.com" target="_blank" style="background-color:#1890FF; border:1px solid #1890FF; border-radius:10px; padding:10px 75px 10px 75px;  mso-padding-alt:0; text-underline-color:#1890FF">Learn more</a></p></td>
                             </table>
                           </td>
                         </tr>
@@ -135,7 +195,7 @@
                         </tr>
                       </table>
                       
-                      <table class="column" style="border-spacing:0;vertical-align:top;width:100%;max-width:252px;display:inline-block;">
+                      <table class="column" style="border-spacing:0;vertical-align:top;width:100%;max-width:252px;display:inline-block;" role="presentation" >
                         <tr>
                           <td style="padding-left: 20px;">
                             <p style="Margin:0;padding:12px 0 10px 0;font-size: 18px;line-height:21.78px;font-weight:700;">Firewall</p>
@@ -159,13 +219,13 @@
                   <!-- Start Data Analysis  Row -->
                   <tr>
                     <td class="one-third-columns" width="436"style="width:100%;padding: 25px 0 0 0 ;font-size:0;">
-                      <table class="column" style="border-spacing:0;vertical-align:top;width:100%;max-width:90px;display:inline-block;">
+                      <table class="column" style="border-spacing:0;vertical-align:top;width:100%;max-width:90px;display:inline-block;"role="presentation">
                         <tr>
                           <td width="90" height="90" style="background-color:#C7EBFF; border-radius:10px;vertical-align: center; text-align: center;"><img src="assets/icons/data analysis.png" alt="Data Analysis Icon"></td>
                         </tr>
                       </table>
                       
-                      <table class="column" style="border-spacing:0;vertical-align:top;width:100%;max-width:252px;display:inline-block;">
+                      <table class="column" style="border-spacing:0;vertical-align:top;width:100%;max-width:252px;display:inline-block;" role="presentation">
                         <tr>
                           <td style="padding-left: 20px;">
                             <p style="Margin:0;padding:12px 0 10px 0;font-size: 18px;line-height:21.78px;font-weight:700;">Data Analysis</p>
@@ -189,13 +249,13 @@
                   <!-- Start Encryption  Row -->
                   <tr>
                     <td class="one-third-columns" width="436"style="width:100%;padding: 25px 0 0 0 ;font-size:0;">
-                      <table class="column" style="border-spacing:0;vertical-align:top;width:100%;max-width:90px;display:inline-block;">
+                      <table class="column" style="border-spacing:0;vertical-align:top;width:100%;max-width:90px;display:inline-block;"role="presentation">
                         <tr>
                           <td width="90" height="90" style="background-color:#FFFDC7; border-radius:10px;vertical-align: center; text-align: center;"><img src="assets/icons/data encryption 2.png" alt="Encryption Icon"></td>
                         </tr>
                       </table>
                       
-                      <table class="column" style="border-spacing:0;vertical-align:top;width:100%;max-width:252px;display:inline-block;">
+                      <table class="column" style="border-spacing:0;vertical-align:top;width:100%;max-width:252px;display:inline-block;" role="presentation">
                         <tr>
                           <td style="padding-left: 20px;">
                             <p style="Margin:0;padding:12px 0 10px 0;font-size: 18px;line-height:21.78px;font-weight:700;">Encryption</p>
@@ -218,14 +278,14 @@
 
                   <!-- Start Encryption  Row -->
                   <tr>
-                    <td class="one-third-columns" width="436"style="width:100%;padding: 25px 0 0 0 ;font-size:0;">
+                    <td class="one-third-columns" width="436"style="width:100%;padding: 25px 0 0 0 ;font-size:0;"role="presentation">
                       <table class="column" style="border-spacing:0;vertical-align:top;width:100%;max-width:90px;display:inline-block;">
                         <tr>
                           <td width="90" height="90" style="background-color:#C7FFE4; border-radius:10px;vertical-align: center; text-align: center;"><img src="assets/icons/protection.png" alt="Protection Icon"></td>
                         </tr>
                       </table>
                       
-                      <table class="column" style="border-spacing:0;vertical-align:top;width:100%;max-width:252px;display:inline-block;">
+                      <table class="column" style="border-spacing:0;vertical-align:top;width:100%;max-width:252px;display:inline-block;" role="presentation"> 
                         <tr>
                           <td style="padding-left: 20px;">
                             <p style="Margin:0;padding:12px 0 10px 0;font-size: 18px;line-height:21.78px;font-weight:700;">Protection</p>
@@ -248,7 +308,7 @@
                   <tr>
                     <td style="padding-top:46px;">
                       <table align="left" border="0" valign="center">
-                        <td style="border-radius:10px;" bgcolor="#1890FF"><a href="https://example.com" target="_blank" style="background-color:#1890FF; border:1px solid #1890FF; border-radius:10px;padding:10px 60px 10px 60px;">Learn more about ServerSharing</a></p></td>
+                        <td><a href="https://example.com" target="_blank" style="background-color:#1890FF; border:1px solid #1890FF; border-radius:10px;padding:10px 60px 10px 60px;">Learn more about ServerSharing</a></p></td>
                       </table>
                     </td>
                   </tr>
@@ -322,6 +382,12 @@
           <!-- End SoMe Icons -->
           <!-- End Footer -->
         </table>
+        
+        <!-- Closing the ghost table. -->
+        <!--[if (gte mso 9)|(IE)]>
+        </td></tr></table>
+        <![endif]-->
+
       </div>
     </center>
   </body>
